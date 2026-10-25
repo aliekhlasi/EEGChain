@@ -1,39 +1,6 @@
 [![](https://img.shields.io/badge/DOI-10.1109/ICBME64381.2024.10895852-blue)](https://doi.org/10.1109/ICBME64381.2024.10895852)
 [![DOI](https://zenodo.org/badge/867418734.svg)](https://doi.org/10.5281/zenodo.13888486)
 # EEGChain: An Open-Access EEGLAB-based Toolbox for Building, Managing, Automating, and Reproducing Batch EEG Processing Pipelines
-
-## About
-
-**EEGChain** is a MATLAB graphical tool, built on [EEGLAB](https://sccn.ucsd.edu/eeglab/), for building and running EEG preprocessing pipelines without writing code. You build a pipeline from ready-made **processing blocks**, set each block's parameters in the GUI, and save the whole pipeline as a configuration file. The same pipeline can then be loaded again and applied to **many datasets in batch**. This makes preprocessing consistent across subjects, easy to share, and reproducible.
-
-**Available processing blocks:**
-- **Filtering:** high-pass and low-pass filters (`pop_eegfiltnew`)
-- **Line-noise removal:** CleanLine
-- **Re-referencing**
-- **Channel and epoch rejection:** manual, or automatic with `clean_rawdata`
-- **Channel interpolation**
-- **ICA:** decomposition and component removal
-- **Inspection:** signal browsing, power spectrum and scalp topography
-
-**Execution modes:**
-- *Interactive:* stop after each block to inspect the data and decide.
-- *Automated:* run the whole pipeline over all loaded datasets without stopping.
-
-Each step's output is saved in its own numbered folder (`step 1__…`, `step 2__…`), so every intermediate result can be checked.
-
-## Getting started
-
-**Requirements:** MATLAB, and EEGLAB with the *clean_rawdata*, *CleanLine* and *ICLabel* plugins.
-
-```matlab
-addpath('/path/to/eeglab'); eeglab nogui;          % load EEGLAB
-addpath(genpath('/path/to/EEGChain/code'));         % add EEGChain
-eegchain                                            % open the EEGChain window
-```
-
-Two example pipeline configurations are included in `code/utilities/sample/`.
-
-**Original repository:** [fardinafdideh/EEGChain](https://github.com/fardinafdideh/EEGChain) (F. Afdideh). The animated demonstrations below are hosted there.
 * A convenient GUI-based EEG (pre-)processing pipeline management system;
 * Loading pre-stored pipeline configurations to ensure consistent signal processing and reproducibility;
 * Interactive GUI for selection, rearrangement, and customization of processing blocks from the EEGLAB toolbox;
@@ -51,37 +18,37 @@ Two example pipeline configurations are included in `code/utilities/sample/`.
 ###  A) Processing Blocks
 
 ###  B) (Re)-Arranging the Processing Blocks
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/creation.gif)
+![](/ppt/creation.gif)
 
 ###  C) Loading Pre-stored Pipeline Configurations
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/configImport.gif)
+![](/ppt/configImport.gif)
 
 ###  D) Processing Pipeline
 
 ###  E) Processing Blocks Parameters
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/parameterSetting.gif)
+![](/ppt/parameterSetting.gif)
 
 ###  F) Naming and Storing the Created Pipeline Configuration
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/config.gif)
+![](/ppt/config.gif)
 
 ###  G) Interactive v.s. Automated Pipeline Execution Mode
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/interactive.gif)
+![](/ppt/interactive.gif)
 
 ###  H) Raw Data Path
 
 ###  I) Dataset Loading
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/dataImportManual.gif)
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/dataImportMat.gif)
+![](/ppt/dataImportManual.gif)
+![](/ppt/dataImportMat.gif)
 
 ###  J) Dataset Removing
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/dataRemove.gif)
+![](/ppt/dataRemove.gif)
 
 ###  K) Pipeline Execution
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/startRunning.gif)
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/batchProc.gif)
+![](/ppt/startRunning.gif)
+![](/ppt/batchProc.gif)
 
 ###  L) Accessing the Results Directory
-![](https://github.com/fardinafdideh/EEGChain/raw/main/ppt/open.gif)
+![](/ppt/open.gif)
 
 ## EEGChain
 ![Slide1](/ppt/GUI.gif)
